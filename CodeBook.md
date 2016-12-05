@@ -2,8 +2,7 @@
 
 Codebook for the project Getting And Cleaning Data Coursera
 Course Nov-Dec 2016
-##The data are from an experiment called: Human Activity
-Recognition Using Smartphones Data Set 
+##The data are from an experiment called: Human Activity Recognition Using Smartphones Data Set 
 
 ##A full description of the experiment is available at:
 
@@ -31,98 +30,66 @@ by calculating variables from the time and frequency domain.
 
  https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-##Preparation steps0 - Working directory and data directory (data are in a different folder)
+##Preparation step0 - Working directory and data directory (data are in a different folder)
 
 pathData  is the directory with the zip folder
 
-##Preparation step1 – no special libraries are used for this script to run
+##Preparation step1 – Download libraries
+no special libraries are used for this script to run
 
 ##Preparation step2 - Download the data (calling it AcceleroData.zip) and unzip the data in a new folder called DataExtract
 
 The extraction has produced:
-
 1 folder (UCI HAR Dataset) containing all data: 
-
 With #4 files and 2 folders
-found:
+2 files are descriptive information for further details about the datasets: features_info.txt and README.txt 
 
-2 files descriptive information for
-further details about the datasets: features_info.txt and README.txt 
-
-##Preparation step3 - update data directories as other
-folders have been created inside
-
+##Preparation step3 - update data directories as other folders have been created inside
 Updated pathData  
 test data are in PathTestDat  (a sub folder to pathData)
 train data are in PathTrainDat (a sub folder to pathData)
 
 ##Preparation step4 - Import the useful data 
-“activity_labels.txt” 
--> Acti_Label (is the class labels with the activities name and code.)
+“activity_labels.txt”  -> Acti_Label (is the class labels with the activities name and code.)
 
-"features.txt" 
--> Features (variable coming from the signals used to estimate
+"features.txt" -> Features (variable coming from the signals used to estimate
 variables of each pattern: and are the name of the columns of the experiment’s
 data) as: 3-axial signals in the X, Y and Z directions; t for time;f for Fast
 Fourier Transform (FFT) frequency; Etc.…
 
 "subject_test.txt" -> subjTest
-
 "X_test.txt" -> X_test
-
 "y_test.txt" -> Y_test
-
 "subject_train.txt" -> subjTrain
-
-"X_train.txt"
--> X_train
-
-"y_train.txt"
--> Y_train
-
+"X_train.txt" -> X_train
+"y_train.txt" -> Y_train
  
 
-put the names on the columns, 
+I have put the names on the columns, X_train and X_test with the data of the dataset Features;
+subjTrain and subjTest with the string “subject”
+and the two others Y_test and Y_train with the sting “activity”
 
-X_train and X_test with the data of the data set Features;
+##Request1.Merges the training and the test sets to create one data set.
 
- subjTrain and
-subjTest with the string “subject”
+The dataset has been called TestTrainData and is combination of cbind and rbind of the above datasets
 
- and the two others
-with the sting “activity”
+##Request2.Extracts only the measurements on the mean and standard deviation for each measurement. 
 
-##Request1.Merges the training and the test sets to create
-one data set.
+with grepl I have taken only the columns of interest (Subject, activity, and the ones containing mean, std)
 
-The dataset has been called TestTrainData and is combination
-of cbind and rbind of the above datasets
+##Request3.Uses descriptive activity names to name the activities in the data set
 
-##Request2.Extracts only the measurements on the mean and
-standard deviation for each measurement. 
+With the use of match I have transformed the activity column data from codes in the co-respective activity name taken in-Acti_Label
 
-with grepl I have taken only the columns of interest
-(Subject, activity, and the ones containing mean, std)
+##Request4.Appropriately labels the data set with descriptive variable names. 
 
-##Request3.Uses descriptive activity names to name the
-activities in the data set
+I have given a descriptive variable to the column names of the data with the help of “for (i in 1:length(ColNewName))” changing the abbreviations in full names
 
-With the use of match I have transformed the activity column
-data in codes in the co-respective activity name taken in-Acti_Label
-
-##Request4.Appropriately labels the data set with
-descriptive variable names. 
-
-I have given a descriptive variable to the column names of
-the data with the help of “for (i in 1:length(ColNewName))” changing the abbreviations
-in full names
-
-##Request5.From the data set in step 4, creates a second,
-independent tidy data set with the average of each variable for each activity
+##Request5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity
 and each subject.
 
 Created tidy data called ItsTidy with the aggregate function
-and write it in an independent txt file called tidy.txt.
+and wrote it in an independent txt file called tidy.txt.
 
  
 
