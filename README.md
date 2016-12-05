@@ -8,15 +8,16 @@ Course - Nov-Dec 2016
 #### The data are from an experiment called: Human Activity Recognition Using Smartphones Data Set
 #### A full description of the experiment is available at:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
-##Description résumé: Data have been collected from smart phone carried by volunteers while performing various activities.
+
+Description résumé: Data have been collected from smart phone carried by volunteers while performing various activities.
 
 #### Data are downloaded from: 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 #### The goal of the project is 
 #####to download data coming from the above experiment and stored in a zip format on the web; 
-#####extract from them only the measurements on the mean and standard deviation and create a tidy data set with
-#####the average of each variable for each activity and each subject (volunteer) appropriately labelled with descriptive names
+#####extract from them only the measurements on the mean and standard deviation and 
+#####create a tidy data set with the average of each variable for each activity and each subject (volunteer) appropriately labelled with descriptive names
 
 ########Descriptions of the steps in Codebook.md
 
@@ -27,7 +28,7 @@ R scipt to perform the tidy data requested from the raw data
 a code book that describes the variables, the data, and any transformations or work that I have performed to clean up the
 data. 
 #### README.md 
-a welcom file to introduce the work and explain how all of the scripts work and how they are connected
+a welcome file to introduce the work and explain how all of the scripts work and how they are connected
 #### tidy.txt 
 a tidy data set result of the run_analysis.R script, that can be used for later analysis.
 
