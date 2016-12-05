@@ -69,23 +69,23 @@ I have put the names on the columns, X_train and X_test with the data of the dat
 subjTrain and subjTest with the string “subject”
 and the two others Y_test and Y_train with the sting “activity”
 
-##Request1.Merges the training and the test sets to create one data set.
+##Request1. Merges the training and the test sets to create one data set.
 
 The dataset has been called TestTrainData and is combination of cbind and rbind of the above datasets
 
-##Request2.Extracts only the measurements on the mean and standard deviation for each measurement. 
+##Request2. Extracts only the measurements on the mean and standard deviation for each measurement. 
 
 with grepl I have taken only the columns of interest (Subject, activity, and the ones containing mean, std)
 
-##Request3.Uses descriptive activity names to name the activities in the data set
+##Request3. Uses descriptive activity names to name the activities in the data set
 
 With the use of match I have transformed the activity column data from codes in the co-respective activity name taken in-Acti_Label
 
-##Request4.Appropriately labels the data set with descriptive variable names. 
+##Request4. Appropriately labels the data set with descriptive variable names. 
 
 I have given a descriptive variable to the column names of the data with the help of “for (i in 1:length(ColNewName))” changing the abbreviations in full names
 
-##Request5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity
+##Request5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity
 and each subject.
 
 Created tidy data called ItsTidy with the aggregate function
