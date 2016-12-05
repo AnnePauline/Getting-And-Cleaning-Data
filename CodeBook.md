@@ -30,7 +30,7 @@ by calculating variables from the time and frequency domain.
 
  https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
-##Preparation step0 - Working directory and data directory (data are in a different folder)
+##Preparation step0 - Working directory and data directory (data are in sub folders inside the working area)
 
 pathData  is the directory with the zip folder
 
