@@ -12,7 +12,7 @@
 
 #######################################################################################################
 
-####Preparation steps - Working directory and data directory (data are in a different director)####
+####Preparation steps - Working directory and data directory (data are in sub folders of the working directory)####
 #Working directory
 getwd()
 
