@@ -142,13 +142,21 @@ WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
 **********
 ##Naming of the datasets from raw data to R data
 "subject_test.txt" -> subjTest
+
 "X_test.txt" -> X_test
+
 "y_test.txt" -> Y_test
+
 "subject_train.txt" -> subjTrain
+
 "X_train.txt" -> X_train
+
 "y_train.txt" -> Y_train
+
 “activity_labels.txt”  -> Acti_Label 
+
 "features.txt"  -> Features 
+
 
 ##Step by Steps Work out
 I have put the names on the columns, X_train and X_test with the data of the dataset Features;
